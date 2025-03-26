@@ -32,3 +32,14 @@ read filename
 tar -xvf "$HOME/.backup/$filename" -C "$HOME/restore/"
 echo "File restored: $filename"
 }
+
+###########
+# Delete
+###########
+
+delete(){
+set -e
+TARGET_DIR="/home/$USER/.backup/"
+find "$TARGET_DIR" -cmin +1 -delete
+echo "Deletion completed!"
+}
