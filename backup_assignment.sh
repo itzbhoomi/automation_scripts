@@ -45,3 +45,20 @@ TARGET_DIR="/home/$USER/.backup/"
 find "$TARGET_DIR" -cmin +1 -delete
 echo "Deletion completed!"
 }
+
+###########
+# Menu
+###########
+
+echo "Select an option:"
+echo "1 - Backup"
+echo "2 - Restore"
+echo "3 - Delete"
+read -p "Enter your choice: " choice
+
+case $choice in
+    1) backup ;;
+    2) restore ;;
+    3) delete ;;
+    *) echo "Invalid option! Please enter 1, 2, or 3." ;;
+esac
