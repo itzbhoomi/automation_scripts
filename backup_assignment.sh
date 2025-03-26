@@ -7,6 +7,9 @@
 
 ###########
 
+# Backup
+
+###########
 set -e
 mkdir -p "$HOME/.backup"
 backup="/home/$USER/Documents"
