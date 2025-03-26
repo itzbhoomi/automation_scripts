@@ -11,6 +11,7 @@
 
 ###########
 
+restore(){
 set -e
 mkdir -p "$HOME/restore"
 ls /home/$USER/.backup/
@@ -19,3 +20,4 @@ read filename
 
 tar -xvf "$HOME/.backup/$filename" -C "$HOME/restore/"
 echo "File restored: $filename"
+}
