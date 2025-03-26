@@ -14,6 +14,6 @@
 delete(){
 set -e
 TARGET_DIR="/home/$USER/.backup/"
-find $TARGET_DIR -mtime +30 -exec rm -f{}\;
-echo "Files older than 30 days deleted!"
+find "$TARGET_DIR" -cmin +1 -delete
+echo "Deletion completed!"
 }
