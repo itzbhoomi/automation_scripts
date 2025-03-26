@@ -7,4 +7,11 @@
 
 ###########
 
-g
+set -e
+mkdir -p "$HOME/.backup"
+backup="/home/$USER/Documents/"
+dest="/home/$USER/.backup/"
+timestamp=$(date +%Y%m%d_%H%M%S)
+filename=backup_$timestamp.tar.gz
+tar -czvf "$dest/$filename" "$backup"
+echo "File backup completed: $dest/$filename"
