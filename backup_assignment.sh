@@ -11,3 +11,11 @@
 
 ###########
 
+set -e
+mkdir -p "$HOME/restore"
+ls /home/$USER/.backup/
+echo "Enter the filename which you wish to restore: "
+read filename
+
+tar -xvf "$HOME/.backup/$filename" -C "$HOME/restore/"
+echo "File restored: $filename"
