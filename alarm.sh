@@ -15,6 +15,6 @@
 while true 
     do 
         clear
-        echo $(Date +"T%")
+        echo $(date +"T%")
         sleep 1
     done
